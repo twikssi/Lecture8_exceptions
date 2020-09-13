@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class UserValidationService {
-    public static Logger logger = LoggerFactory.getLogger(UserValidationService.class);
+    public static final Logger logger = LoggerFactory.getLogger(UserValidationService.class);
 
     private UserValidationService() {
     }
