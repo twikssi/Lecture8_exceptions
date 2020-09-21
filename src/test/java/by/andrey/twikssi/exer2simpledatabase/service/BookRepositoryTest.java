@@ -46,4 +46,16 @@ public class BookRepositoryTest {
 
         assertEquals(lifeIsShort, bookRepository.findById("34"));
     }
+
+    @Test(expected = ItemNotFoundException.class)
+    public void deleteDone() throws ItemNotFoundException {
+        bookRepository.delete("2");
+
+        bookRepository.findById("2");
+    }
+
+    @Test(expected = ItemNotFoundException.class)
+    public void deleteThrowsException() throws ItemNotFoundException {
+        bookRepository.delete("2534534");
+    }
 }

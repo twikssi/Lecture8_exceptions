@@ -36,6 +36,12 @@ public class BookRepository implements Repository<Book> {
 
     @Override
     public void delete(String id) throws ItemNotFoundException {
-
+        for (Map.Entry<String, Book> book: repositoryBooks.entrySet()){
+            if (book.getValue().getId().equalsIgnoreCase(id)){
+                repositoryBooks.remove(book.getKey(),book.getValue());
+                return;
+            }
+        }
+        throw new ItemNotFoundException();
     }
 }
