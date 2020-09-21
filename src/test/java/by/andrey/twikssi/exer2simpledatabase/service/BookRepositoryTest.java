@@ -58,4 +58,9 @@ public class BookRepositoryTest {
     public void deleteThrowsException() throws ItemNotFoundException {
         bookRepository.delete("2534534");
     }
+
+    @Test
+    public void findAll() {
+        assertEquals(0,bookRepository.findAll().size());
+    }
 }

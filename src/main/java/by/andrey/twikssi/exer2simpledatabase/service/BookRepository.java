@@ -4,6 +4,7 @@ import by.andrey.twikssi.exer2simpledatabase.bean.Book;
 import by.andrey.twikssi.exer2simpledatabase.exceptions.ItemNotFoundException;
 import by.andrey.twikssi.exer2simpledatabase.interfaces.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +17,7 @@ public class BookRepository implements Repository<Book> {
 
     @Override
     public List<Book> findAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
