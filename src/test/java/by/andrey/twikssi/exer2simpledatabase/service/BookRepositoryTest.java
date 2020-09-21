@@ -38,4 +38,12 @@ public class BookRepositoryTest {
     public void findByIdReturnException() throws ItemNotFoundException {
         bookRepository.findById("154");
     }
+
+    @Test
+    public void save() throws ItemNotFoundException {
+        Book lifeIsShort = new Book("34","Life is short", "Remark", 390);
+        bookRepository.save(lifeIsShort);
+
+        assertEquals(lifeIsShort, bookRepository.findById("34"));
+    }
 }

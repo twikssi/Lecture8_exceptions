@@ -31,7 +31,7 @@ public class BookRepository implements Repository<Book> {
 
     @Override
     public void save(Book item) {
-
+        repositoryBooks.put(item.toString(),item);
     }
 
     @Override
